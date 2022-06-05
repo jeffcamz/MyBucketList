@@ -19,12 +19,16 @@ namespace MyBucketList.Mobile.ViewModels
 
         private async Task SaveCommandExecute()
         {
-            await _mediator.Send(new AddEditBucketlistItemRequest { Title = Title });
+            await _mediator.Send(new AddEditBucketlistItemRequest { Title = Title , Description  = Description });
             await NavigationService.GoBackAsync();
         }
 
         public ICommand SaveCommand { get; }
 
         public string Title { get; set; }
+
+        public string Description { get; set; }
+
+        public string Period { get; set; }
     }
 }

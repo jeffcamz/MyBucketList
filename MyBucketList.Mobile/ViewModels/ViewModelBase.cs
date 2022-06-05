@@ -13,10 +13,27 @@ namespace MyBucketList.Mobile.ViewModels
         protected INavigationService NavigationService { get; private set; }
 
         private string _title;
+
+        private string _description;
+
+        private string _period;
+
         public string Title
         {
             get { return _title; }
             set { SetProperty(ref _title, value); }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            set { SetProperty(ref _description, value); }
+        }
+
+        public string Period
+        {
+            get { return _period; }
+            set { SetProperty(ref _period, value); }
         }
 
         public ViewModelBase(INavigationService navigationService)

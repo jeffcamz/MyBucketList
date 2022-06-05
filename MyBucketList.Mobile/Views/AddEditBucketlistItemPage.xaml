@@ -6,6 +6,8 @@
         <StackLayout>
             <Label Text="Title"></Label>
             <Entry Text="{Binding Title}" />
+            <Entry Text="{Binding Description}" />
+            
 
             <Button Command="{Binding SaveCommand}" Text="Save"></Button>
         </StackLayout>

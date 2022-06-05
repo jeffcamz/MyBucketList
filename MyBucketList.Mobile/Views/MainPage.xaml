@@ -7,15 +7,25 @@
         <ToolbarItem Command="{Binding AddBucketlistItemCommand}" Text="Add"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <CollectionView ItemsSource="{Binding BucketlistItems}">
-            <CollectionView.ItemTemplate>
+        <CollectionView ItemsSource="{Binding BucketlistItems}" >
+            <CollectionView.ItemTemplate >
                 <DataTemplate>
-                    <Grid>
-                        <Label Text="{Binding Title}"></Label>
-                    </Grid>
+                    <StackLayout Orientation="Vertical">
+                        
+                        <Label  Text="{Binding Title}"></Label>
+                        <Label  Text="{Binding Description}" ></Label>
+                        <Label  Text="{Binding Period}" Margin="0,0,0,2"></Label>
+                            <!-- Separator -->
+                        <BoxView HeightRequest="0.5"
+                   BackgroundColor="Black"
+                   Grid.Row="1"
+                   VerticalOptions="End"/>
+                    
+                        </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </Grid>
 
 </ContentPage>
+
